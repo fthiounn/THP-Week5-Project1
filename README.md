@@ -5,9 +5,14 @@
 
 
 # Notes & Use :
-
-	-
-
+ -run in commandline from folder : 
+ 	- bundle install
+	- rails db:create |rails db:migrate | rails db:seed
+	- rails s
+- go to http://localhost:3000 and enjoy ;)
+- type in http://localhost:3000/home/:id to go to the hidder url (question 2.4)
+	where the id is an existing user id in the database
+- 
 
 
 #Projet : The Gossip Project, les premières views
