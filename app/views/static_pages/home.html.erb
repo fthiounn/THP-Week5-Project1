@@ -1,0 +1,27 @@
+<!-- JUMBOTRON HERO -->
+
+<div class="jumbotron-hero">
+  <div class="container text-center" >
+    <h1 class="display-4 pt-5 font-weight-bold text-dark">THE GOSSIP PROJECT</h1>
+    <p class="lead pt-5 text-light ">Join our community and share your gossips</p>
+    <%= link_to "Create an account and share a Gossip !", {controller: "static_pages", action: "home"}, class: "btn btn-success btn-lg mt-5 mr-4 " %>
+  </div>
+</div>
+
+
+<!-- GOSSIPS DISPLAY -->
+<div class="container-fluid">
+	<div class="row">
+		<% params[:gossip_array].each do |gossip| %>
+		<div class= "col-4 col-sm-4 col-md-4 col-lg-4 mt-5 text-center" > 
+			<div class="card" style="width: 18rem;">
+			  <div class="card-body">
+			    <h5 class="card-title"><%= gossip.title %></h5>
+			    <p class="card-title">A gossip from : <%= gossip.user.first_name %></p>
+			    <%= link_to "See this Gossip", {controller: "static_pages", action: "home"}, class: "btn btn-primary" %>
+			  </div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>

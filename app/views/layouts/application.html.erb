@@ -4,12 +4,46 @@
     <title>THPWeek5Project1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--  Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" crossorigin="anonymous">
+    <!-- BOOTSWATCH -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css" rel="stylesheet" integrity="sha384-ciphE0NCAlD2/N6NUApXAN2dAs/vcSAOTzyE202jJx3oS8n4tAQezRgnlHqcJ59C" crossorigin="anonymous">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+    <!-- NAVBAR -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+            <%= link_to "The Gossip Project", {controller: "static_pages", action: "home"}, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Home", {controller: "static_pages", action: "home"}, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Add a Gossip", {controller: "static_pages", action: "home"},class: "nav-link"%>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Team", {controller: "static_pages", action: "team"}, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", {controller: "static_pages", action: "contact"}, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
