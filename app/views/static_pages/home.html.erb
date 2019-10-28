@@ -17,7 +17,7 @@
 			<div class="card" style="width: 18rem;">
 			  <div class="card-body">
 			    <h5 class="card-title"><%= gossip.title %></h5>
-			    <p class="card-title">A gossip from : <%= gossip.user.first_name %></p>
+			    <p class="card-title">A gossip from : <%= link_to gossip.user.first_name , dynamic_pages_user_path(:id => gossip.user.id)%></p>
 			    <%= link_to "See this Gossip", dynamic_pages_gossip_path(:id => gossip.id), class: 'btn btn-primary' %>
 			  </div>
 			</div>

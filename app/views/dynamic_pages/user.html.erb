@@ -1,9 +1,13 @@
-<div class ='align-middle text-center'>
-	<div class="card mt-5" style="height:200px">
+<div class ='align-middle'>
+	<div class="card mt-5 ml-5 mr-5" style="height:300px">
 	  <div class="card-body">
-	    <h5 class="card-title"><%= params[:user].first_name %></h5>
-	    <p class="card-title"><%= params[:user].last_name %></p>
-	    <p class="card-text"><%= params[:user].description %></p>
+	    <h5 class="card-title"><%= params[:user].first_name %> <%= params[:user].last_name %></h5>
+	    <p class="card-title"><strong>Age : </strong> <%= params[:user].age %></p>
+	    <p class="card-title"><strong>From : </strong><%= params[:city].name %></p>
+	    <p class="card-text"> <strong>Bio:</strong><br/> <%= params[:user].description %></p>
+	    <p class="card-text"> <strong>Joined The GOssip Project : </strong><%= params[:user].created_at.strftime("%d/%m/%Y") %></p>
+	    <p class="card-text"> <strong>Gossips shared : </strong><%= params[:nb_gossips] %></p>
+	    <p class="card-text"> <strong>Comments : </strong><%= params[:nb_comments] %></p>
 	  </div>
 	</div>
 </div>
