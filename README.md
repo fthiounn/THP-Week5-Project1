@@ -12,7 +12,7 @@
 - go to http://localhost:3000 and enjoy ;)
 - type in http://localhost:3000/home/:id to go to the hidder url (question 2.4)
 	where the id is an existing user id in the database
-- 
+- team and contact page are bootstrat templates 
 
 
 #Projet : The Gossip Project, les premières views

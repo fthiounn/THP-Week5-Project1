@@ -10,13 +10,13 @@
 
 require 'faker'
 
-nb_user = 10
-nb_city = 10
-nb_gossip = 20
-nb_tags = 10
-nb_messages = 20
-nb_comments = 50
-nb_likes = 20
+nb_user = 50
+nb_city = 20
+nb_gossip = 100
+nb_tags = 20
+nb_messages = 400
+nb_comments = 400
+nb_likes = 300
 users = []
 cities = []
 gossips = []
