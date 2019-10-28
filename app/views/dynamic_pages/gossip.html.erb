@@ -1,0 +1,24 @@
+<!-- Affichage Stylisé du Gossip-->
+<div class ='align-middle text-center'>
+	<div class="card mt-5" style="height:200px">
+	  <div class="card-body">
+	    <h5 class="card-title"><%= params[:gossip].title %></h5>
+	    <p class="card-title">A gossip from : <%= link_to params[:gossip].user.first_name , dynamic_pages_user_path(:id => params[:gossip].user.id)%></p>
+	    <p class="card-text"><%= params[:gossip].content %></p>
+	  </div>
+	</div>
+</div>
+
+
+<!-- DISPLAY DES COMMENTAIRES -->
+<h1 class='text-center mt-2 mb-2'>Commentaires</h1>
+<div class='d-flex'>
+<% params[:comments].each do |comment| %>
+	<div class="card p-2" style="width: 18rem;">
+	  <div class="card-body">
+	    <h5 class="card-title">From : 
+			    <%= link_to comment.user.first_name , dynamic_pages_user_path(:id => comment.user.id)%></h5>
+	    <p class="card-title"><%= comment.content %></p>
+	  </div>
+	</div>
+<%end%>

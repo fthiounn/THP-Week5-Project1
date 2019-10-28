@@ -18,7 +18,7 @@
 			  <div class="card-body">
 			    <h5 class="card-title"><%= gossip.title %></h5>
 			    <p class="card-title">A gossip from : <%= gossip.user.first_name %></p>
-			    <%= link_to "See this Gossip", {controller: "static_pages", action: "home"}, class: "btn btn-primary" %>
+			    <%= link_to "See this Gossip", dynamic_pages_gossip_path(:id => gossip.id), class: 'btn btn-primary' %>
 			  </div>
 			</div>
 		</div>
